@@ -8,7 +8,7 @@ public class Main {
         author2 = new Author("Александр Пушкин");
 
         Book book1;
-        book1 = new Book("Воина и Мир", author1, 1864);
+        book1 = new Book("Воина и Мир", author1, 1868);
 
         Book book2;
         book2 = new Book("Руслан и Людмила", author2, 1820);
