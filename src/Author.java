@@ -2,18 +2,25 @@ import java.util.Objects;
 
 public class Author {
 
-    String authorName;
+    private String authorName;
+    private String authorSurname;
 
-    public Author(String authorName) {
+    public Author(String authorName, String authorSurname) {
 
         this.authorName = authorName;
+        this.authorSurname = authorSurname;
 
     }
 
     public String getAuthorName() {
 
-        return authorName;
+        return authorName + " " + authorSurname;
 
+    }
+
+    @Override
+    public String toString() {
+        return authorName + " " + authorSurname;
     }
 
     @Override
@@ -21,16 +28,11 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return authorName.equals(author.authorName);
+        return authorName.equals(author.authorName) && authorSurname.equals(author.authorSurname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorName);
-    }
-
-    @Override
-    public String toString() {
-        return authorName;
+        return Objects.hash(authorName, authorSurname);
     }
 }
