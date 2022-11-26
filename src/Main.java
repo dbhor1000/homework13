@@ -2,10 +2,10 @@ public class Main {
     public static void main(String[] args) {
 
         Author author1;
-        author1 = new Author("Лев Толстой");
+        author1 = new Author("Лев", "Толстой");
 
         Author author2;
-        author2 = new Author("Александр Пушкин");
+        author2 = new Author("Александр", "Пушкин");
 
         Book book1;
         book1 = new Book("Воина и Мир", author1, 1868);
